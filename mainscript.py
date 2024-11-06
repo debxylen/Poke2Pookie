@@ -25,6 +25,9 @@ pokemon_data = {}
 
 @client.event
 async def on_ready():
+    newpath = '.\\temp' 
+    if not os.path.exists(newpath):
+        os.makedirs(newpath)
     print(f'Logged in as {client.user}')
     client.add_cog(PokeNamer(client))
 
