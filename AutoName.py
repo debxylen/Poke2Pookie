@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import requests
 import random
+from time import time
 import os
 from io import BytesIO
 from PIL import Image
@@ -23,10 +24,12 @@ class PokeNamer(commands.Cog):
                     image = Image.open(BytesIO(response.content))
                     temp_image_path = "temp/%s.jpg"%random.randint(1,10_000_000)
                     image.save(temp_image_path)
-
+                    start = time.time() 
                     result, score = match_pokemon(temp_image_path, self.ai, 400)
                     await message.channel.send(f"Best Match: {result}\nScore: {score}\nPings: <@925982382778109982>")
+                    diff = time.time() - start
                     os.remove(temp_image_path)
+                    print(diff)
 
 
                     
