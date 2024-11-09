@@ -65,6 +65,7 @@ battle_instructions = {
         "loses": {
             "Primal Kyogre": "Loses via 2KO+",
             "Lunala": "Loses via 2KO+",
+            "Zacian": "Might lose to fast Zacian but use Hyper Beam spam then Extreme speed when you are on very low HP",
             "Ho-oh": "Loses via 2KO+",
             "Marshadow": "Loses via 2KO+",
             "Mega Mewtwo Y": "Most likely you will lose this fight but do Hyper Beam then Extreme Speed",
@@ -79,8 +80,10 @@ battle_instructions = {
         "wins": {
             "Eternatus": "Wins via Outrage Ohko or 2KO (considering decent stats on rayquaza, dragon is super effective to dragon)",
             "Zekrom": "Wins via Outrage Ohko",
-            "Kyurem": "Wins via Outrage Ohko",
+            "Kyurem": "Wins via Outrage Ohko but don't switch to Rayquaza if opponent is using kyogre (rayquaza is 4x weak to ice beam)",
             "Giratina": "Wins via Outrage 2KO",
+            "Lunala": "Wins if jolly via Crunch Ohko",
+            "Yveltal": "Wins via Dragon Ascent + Extreme Speed",
             "Ho-oh": "Wins via Outrage 2KO",
             "Lugia": "Wins via Outrage 2KO",
             "Landorus": "Wins via Outrage 2KO",
@@ -90,7 +93,8 @@ battle_instructions = {
             "Mega Mewtwo X": "Wins via Fly then Extreme Speed",
             "Primal Groudon": "Wins via Double Outrage then Extreme Speed",
             "Lunala": "Wins via Crunch Ohko",
-            "Zygarde": "Wins via Outrage 2KO if Ray has 10+ Hp and 11+ Def vs Jolly Zygarde"
+            "Zygarde": "Wins via Outrage 2KO if Ray has 10+ Hp and 11+ Def vs Jolly Zygarde",
+            "Shadow Rider Calyrex": "Wins via Crunch"
         },
         "loses": {
             "Magearna": "Loses via Ohko",
@@ -115,6 +119,7 @@ battle_instructions = {
             "Lunala": "Wins via Sucker Punch spam",
             "Mewtwo X": "Wins via Sky Attack spam",
             "Ho-Oh": "Wins via Sky Attack spam",
+            "Zacian": "Wins via Sky Attack spam",
             "Zygarde": "Wins via Sky Attack spam",
             "Landorus": "Wins via Sky Attack spam",
             "Marshadow": "Wins via Sky Attack spam",
@@ -154,6 +159,7 @@ battle_instructions["Primal Groudon"] = {
         "Regigigas": "Wins via Hammer Arm Spam",
         "Arceus": "Wins via Hammer Arm Spam",
         "Kyurem": "Wins via Hammer Arm Spam",
+        "Crowned Zacian": "Wins via Eruption Ohko",
         "Mega Mewtwo X": "Wins via Hammer Arm then Precipice Blades",
         "Mega Mewtwo Y": "Wins via Hammer Arm then Precipice Blades"
     },
@@ -176,8 +182,9 @@ battle_instructions["Primal Kyogre"] = {
         "Primal Groudon": "Wins via Water Spout Spam",
         "Magearna": "Wins via Water Spout Spam",
         "Marshadow": "Wins via Water Spout Spam",
+        "Lunala": "Wins if timid via Water Spout 2KO+",
         "Solgaleo": "Wins via Water Spout Spam",
-        "Lunala": "Wins via Water Spout Spam",
+        "Lunala": "Wins via Water Spout Spam if timid",
         "Ho-oh": "Wins via Water Spout Spam",
         "Landorus": "Wins via Water Spout Spam",
         "Diancie": "Wins via Water Spout Spam",
@@ -199,7 +206,7 @@ battle_instructions["Primal Kyogre"] = {
         "Xerneas": "Loses to Naive Xerneas via 2KO, Wins vs Adamant Xerneas via Water Spout 2KO",
         "Giratina": "Depends on Send, use Ice Beam",
         "Primal Kyogre": "Depends on Send, use 2 Water Spouts then Double-Edge",
-        "Arceus": "Wins if Naive, Loses to Rash Arceus if less than 23 HP and 23 SpDef"
+        "Arceus": "Wins if Naive arceus, Loses to Rash Arceus if less than 23 HP and 23 SpDef"
     }
 }
 
@@ -396,6 +403,44 @@ battle_instructions["Dragapult"] = {
     },
     "conditional": {
         "Dragapult": "Whoever is faster or has send wins via Phantom Force"
+    }
+}
+
+
+battle_instructions["Eternatus"] = {
+    "wins": {
+        "Rayquaza": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Kyogre": "Wins via Dynamax Cannon or Eternabeam Spam", 
+        "Regigigas": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Arceus": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Yveltal": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Giratina": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Zekrom": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Marshadow": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Lugia": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Ho-oh": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Kyurem": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Landorus": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Victini": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Zamazenta": "Wins via Flamethrower Spam",
+        "Magearna": "Wins via Flamethrower Spam",
+        "Solgaleo": "Wins via Flamethrower Spam",
+        "Melmetal": "Wins via Flamethrower Spam",
+        "Xerneas": "Wins via Venoshock Spam",
+        "Diancie": "Wins via Venoshock Spam"
+    },
+    "loses": {
+        "Zacian": "Loses via 2KO+, but using Venoshock should work well.",
+        "Lunala": "Loses via 2KO+, but use Dynamax Cannon (can also use Flamethrower).",
+        "Groudon": "Loses via 2KO+, but use Dynamax Cannon. Do NOT use Flamethrower as Groudon is resistant to fire.",
+        "Ice Rider Calyrex": "Loses via Ohko, but use Flamethrower.",
+        "Shadow Rider Calyrex": "Loses via Ohko, but use Dynamax Cannon (can also use Flamethrower).",
+        "Dialga": "Loses via Ohko, but use Dynamax Cannon (can also use Flamethrower).",
+        "Mewtwo X": "Loses via Ohko, but use Dynamax Cannon (or Flamethrower).",
+        "Mewtwo Y": "Loses via Ohko, but use Dynamax Cannon (or Flamethrower)."
+    },
+    "conditional": {
+        "Zygarde": "May lose via 2KO+, but use Eternabeam or Dynamax Cannon. 28+ Sp. Atk versus perfect Bulk Zygarde, but about 20+ Sp. Atk to win generally."
     }
 }
 
