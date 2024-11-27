@@ -409,7 +409,7 @@ battle_instructions["Dragapult"] = {
 
 battle_instructions["Eternatus"] = {
     "wins": {
-        "Rayquaza": "Wins via Dynamax Cannon or Eternabeam Spam",
+        "Rayquaza": "Wins via Hyper Beam Spam",
         "Kyogre": "Wins via Dynamax Cannon or Eternabeam Spam", 
         "Regigigas": "Wins via Dynamax Cannon or Eternabeam Spam",
         "Arceus": "Wins via Dynamax Cannon or Eternabeam Spam",
